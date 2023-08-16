@@ -1,0 +1,6 @@
+id_number_not_matched: ID number not matched
+
+verification_status_unverified: Unverified
+verification_status_approving: Approving
+verification_status_approved: Approved
+verification_status_rejected: Rejected

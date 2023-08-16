@@ -1,0 +1,36 @@
+host:
+  cookie: localhost
+  infra: "http://192.168.0.156:8088"
+
+service:
+  name: localhost
+  port: 9999
+
+email:
+  href-a: https://qa-e.dghire.com/a/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-b: https://qa-e.dghire.com/b/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-s: https://qa-e.dghire.com/s/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-c: https://qa-e.dghire.com/c/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-invite: https://qa-e.dghire.com/c/r-process?email={{.Email}}&nonce={{.Nonce}}
+
+mysql:
+  url: "root:@tcp(localhost:3306)/whale?charset=utf8mb4&parseTime=true&loc=Local&tls=skip-verify&timeout=5s&readTimeout=5s&writeTimeout=5s"
+  max-open-conns: 20
+  max-idle-conns: 10
+  max-life-time: 3600
+  max-idle-time: 1200
+
+url:
+  fgw: "https://e.dghire.com/fgw/download/"
+
+app:
+  name: go-uc
+
+monitor:
+  port: 19002
+
+veriff:
+  public-key: "b6bc5053-8d9a-4dda-8e37-3e2338408ab5"
+  private-key: "c9cd03e1-e635-4f2d-8a12-2b476226c862"
+  decision-url: "https://stationapi.veriff.com/v1/sessions/%s/decision"
+  person-url: "https://stationapi.veriff.com/v1/sessions/%s/person"

@@ -1,0 +1,6 @@
+id_number_not_matched: 您使用的证件号与您个人信息中预留的证件号不一致，请仔细确认后重试
+
+verification_status_unverified: 未验证
+verification_status_approving: 验证中
+verification_status_approved: 已验证
+verification_status_rejected: 验证失败

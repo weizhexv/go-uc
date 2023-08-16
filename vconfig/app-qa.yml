@@ -1,0 +1,36 @@
+host:
+  cookie: qa-e.dghire.com
+  infra: "http://qa-infra-service:8080"
+
+service:
+  name: qa-go-uc-service
+  port: 8080
+
+email:
+  href-a: https://qa-e.dghire.com/a/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-b: https://qa-e.dghire.com/b/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-s: https://qa-e.dghire.com/s/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-c: https://qa-e.dghire.com/c/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-invite: https://qa-e.dghire.com/c/r-process?email={{.Email}}&nonce={{.Nonce}}
+
+mysql:
+  url: "whale-qa:WhaleQaMySql20230424@tcp(dghire-database.cmdtwjmdcm5b.eu-central-1.rds.amazonaws.com:3306)/whale_qa?charset=utf8mb4&parseTime=true&loc=Local&tls=skip-verify&timeout=1s&readTimeout=2s&writeTimeout=2s&interpolateParams=true&sql_mode=STRICT_TRANS_TABLES"
+  max-open-conns: 15
+  max-idle-conns: 5
+  max-life-time: 3600
+  max-idle-time: 1200
+
+url:
+  fgw: "https://qa-e.dghire.com/fgw/download/"
+
+app:
+  name: go-uc
+
+monitor:
+  port: 19002
+
+veriff:
+  public-key: "7582a16c-2aff-4201-ad08-366297e9ce48"
+  private-key: "24d44e19-28e5-49a9-acfc-2e484fc8b4cc"
+  decision-url: "https://stationapi.veriff.com/v1/sessions/%s/decision"
+  person-url: "https://stationapi.veriff.com/v1/sessions/%s/person"

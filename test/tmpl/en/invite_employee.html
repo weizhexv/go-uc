@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<table class="container"
+       style="margin: 0 auto; width: 650px; border: 1px solid #E5E7EB; border-radius: 8px; padding: 32px;" width="650">
+    <tr>
+        <td>
+            <img
+                    style="width: 137px; margin-top: 20px"
+                    src="https://video.reta-inc.com/image/default/55353B2E45AC4A8A8668957BAFFE9938-6-2.png"
+            />
+        </td>
+    </tr>
+    <tr>
+        <td class="title"
+            style="display: inline-block; font-weight: 600; font-size: 26px; line-height: 36px; color: #1D2129;">
+            You have a contract invitation to sign！
+        </td>
+    </tr>
+    <tr>
+        <td class="hello"
+            style="display: inline-block; margin: 32px 0 8px; font-weight: 500; font-size: 16px; line-height: 32px; color: #1D2129;">
+            Hi
+        </td>
+    </tr>
+    <tr>
+        <td class="content" style="display: inline-block; font-size: 16px; line-height: 32px; color: #4E5969;">
+            {{.DomainName}} pleasure working with you, this is your invitation to sign the contract, and you can find all the details we discussed in the contract.
+        </td>
+    </tr>
+    <tr>
+        <td class="bottom"
+            style="display: inline-block; margin-top: 24px; font-size: 16px; line-height: 32px; color: #4E5969;">
+            If you're ready to get started, Please click on the link below to sign.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{{.Href}}" target="_blank">link address</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,8 @@
+package enum
+
+const (
+	VERIFICATION_STATUS_UNVERIFIED = "unverified"
+	VERIFICATION_STATUS_APPROVING  = "approving"
+	VERIFICATION_STATUS_APPROVED   = "approved"
+	VERIFICATION_STATUS_REJECTED   = "rejected"
+)

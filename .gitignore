@@ -1,0 +1,6 @@
+/.idea/
+/bin/
+/var/
+/vendor/
+.DS_Store
+/vconfig/i18n/common/

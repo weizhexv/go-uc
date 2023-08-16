@@ -1,0 +1,36 @@
+host:
+  cookie: e.dghire.com
+  infra: "http://go-infra-service:8080"
+
+service:
+  name: go-uc-service
+  port: 8080
+
+email:
+  href-a: https://e.dghire.com/a/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-b: https://e.dghire.com/b/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-s: https://e.dghire.com/s/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-c: https://e.dghire.com/c/set-password?domainName={{.DomainName}}&email={{.Email}}&nonce={{.Nonce}}
+  href-invite: https://e.dghire.com/c/r-process?email={{.Email}}&nonce={{.Nonce}}
+
+mysql:
+  url: "whale:WhaleMySql20230424@tcp(dghire-database.cmdtwjmdcm5b.eu-central-1.rds.amazonaws.com:3306)/whale?charset=utf8mb4&parseTime=true&loc=Local&tls=skip-verify&timeout=5s&readTimeout=5s&writeTimeout=5s&sql_mode=STRICT_TRANS_TABLES"
+  max-open-conns: 20
+  max-idle-conns: 10
+  max-life-time: 3600
+  max-idle-time: 1200
+
+url:
+  fgw: "https://e.dghire.com/fgw/download/"
+
+app:
+  name: go-uc
+
+monitor:
+  port: 19002
+
+veriff:
+  public-key: "2585aeb4-f500-4dba-bf38-caab12bf9c8f"
+  private-key: "e7a8f59e-b052-464f-999c-91fe5cb03d90"
+  decision-url: "https://stationapi.veriff.com/v1/sessions/%s/decision"
+  person-url: "https://stationapi.veriff.com/v1/sessions/%s/person"
